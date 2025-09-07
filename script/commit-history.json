@@ -19,12 +19,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5ceb31f26bb18e7afc5cd88720124748b2d94f86",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T21:01:48.000Z",
       "message": "doc: agrego lista de funcionalidaes",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/5ceb31f26bb18e7afc5cd88720124748b2d94f86"
     },
     "stats": {
       "total": 22,
@@ -34,6 +34,25 @@
     },
     "coverage": 100,
     "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-07T22:07:08.000Z",
+      "message": "feat: Ingreso hora de ingreso y muestro en pantalla lo ingresado",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 59,
+      "additions": 42,
+      "deletions": 17,
+      "date": "2025-09-07"
+    },
+    "coverage": 100,
+    "test_count": 2,
     "failed_tests": 0,
     "conclusion": "success"
   }

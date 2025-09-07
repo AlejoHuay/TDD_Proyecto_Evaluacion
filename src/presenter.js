@@ -1,15 +1,17 @@
-import sumar from "./sumador";
+import Tarifar from "./tarifador.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const entryH = document.querySelector("#entry-hour");
+//const second = document.querySelector("#segundo-numero");
+const form = document.querySelector("#tarifar-form");
+const entryHourDiv = document.querySelector("#entryHour-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const entryHour = entryH.value;
+  //const secondNumber = Number.parseInt(second.value);
+  const tarifa = new Tarifar(entryHour);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+
+  entryHourDiv.innerHTML = "<p> Hora entrada: " + tarifa.showEntryHour() + "</p>";
 });

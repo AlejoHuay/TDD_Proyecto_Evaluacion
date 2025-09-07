@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "2adb7d5544bd8ff5632e6ecfee54cf14ea08bdd9",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T17:42:25.000Z",
       "message": "build: instalo y configuro entorno de pruebas con jest y babel",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/2adb7d5544bd8ff5632e6ecfee54cf14ea08bdd9"
     },
     "stats": {
       "total": 4171,
       "additions": 1930,
       "deletions": 2241,
+      "date": "2025-09-07"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-07T21:01:48.000Z",
+      "message": "doc: agrego lista de funcionalidaes",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 22,
+      "deletions": 0,
       "date": "2025-09-07"
     },
     "coverage": 100,

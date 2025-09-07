@@ -1,0 +1,22 @@
+Lista de funcionalidades priorizadas con el cliente:
+
+- Ingresar hora de ingreso y mostrar en pantalla lo ingresado (Botón mostrar).
+- Ingresar hora de salida y mostrar en pantalla lo ingresado.
+- Mostrar el monto total a pagar con la tarifa base (Botón consultar).
+- Mostrar el monto total a pagar con la tarifa nocturna.
+- Mostrar el monto total a pagar segun el tope maximo por dia calendario.
+
+- Seleccionar estado del ticket y mostrar eleccion.
+- Seleccionar estado del ticket y mostrar el monto de la penalidad que tiene el estado de "extraviado".
+- Seleccionar estado del ticket y mostrar el monto de la penalidad que tiene el estado de "no extraviado".
+- Mostrar el monto final a pagar de la penalidad para el estado de ticket "extraviado".
+- Mostrar el monto final a pagar segun el monto total para el estado de ticket "no extraviado".
+
+- Ingresar fecha+hora de ingreso y mostrar en pantalla lo ingresado (Botón mostrar).
+- Ingresar fecha+hora de salida y mostrar en pantalla lo ingresado.
+- El sistema debe validar que la fecha y hora de salida no sea anterior a la fecha y hora de entrada.
+
+- Mostrar un desglose por día cuando la estadía cruza varios días.
+
+- El monto final se muestra con redondeo monetario a dos decimales.
+- El sistema debe validar que la hora de salida no sea anterior a la de entrada.

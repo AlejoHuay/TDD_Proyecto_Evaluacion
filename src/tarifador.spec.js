@@ -16,4 +16,9 @@ describe("Tarifar", () => {
     const tarifa = new Tarifar("12:00","15:01")
     expect(tarifa.showTotalCost()).toEqual(40);
   });
+
+  it("Deberia Validar que la hora de entrada no sea despues de la de salida", () => {
+    const tarifa = new Tarifar("15:00","12:01")
+    expect(tarifa.showTotalCost()).toEqual(-1);
+  });
 });

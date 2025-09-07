@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c14f2e76d02dbcdd2cae0317c1217f18122a3a00",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T23:16:14.000Z",
       "message": "feat: Muestro el monto total a pagar con la tarifa base",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/c14f2e76d02dbcdd2cae0317c1217f18122a3a00"
     },
     "stats": {
       "total": 22,
@@ -91,6 +91,25 @@
     },
     "coverage": 90.48,
     "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-07T23:21:47.000Z",
+      "message": "feat: Valido con un mensaje que la hora de entrada no sea depues que la de salida",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 14,
+      "deletions": 1,
+      "date": "2025-09-07"
+    },
+    "coverage": 91.3,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }

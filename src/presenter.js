@@ -21,5 +21,9 @@ form.addEventListener("submit", (event) => {
 
   entryHourDiv.innerHTML = "<p> Hora entrada: " + tarifa.showEntryHour() + "</p>";
   exitHourDiv.innerHTML = "<p> Hora salida: " + tarifa.showExitHour() + "</p>";
-  totalCostDiv.innerHTML = "<p> Costo total: " + tarifa.showTotalCost() + " Bs</p>";
+  if(tarifa.showTotalCost()===-1){
+    totalCostDiv.innerHTML = "<p> Costo total: La hora de salida no puede ser anterior a la de entrada. </p>";
+  }else{
+    totalCostDiv.innerHTML = "<p> Costo total: " + tarifa.showTotalCost() + " Bs</p>";
+  }
 });

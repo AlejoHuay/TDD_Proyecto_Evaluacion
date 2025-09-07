@@ -31,6 +31,10 @@ class Tarifar{
     const start = this.hoursEntry * 60 + this.minutesEntry;
     const end   = this.hoursExit  * 60 + this.minutesExit;
 
+    if (end < start) {
+        return -1;
+    }
+
     const diffMinutes = end - start;
 
     const totalHours = Math.max(1, Math.ceil(diffMinutes / 60));

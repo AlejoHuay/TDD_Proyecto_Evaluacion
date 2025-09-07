@@ -21,4 +21,9 @@ describe("Tarifar", () => {
     const tarifa = new Tarifar("15:00","12:01")
     expect(tarifa.showTotalCost()).toEqual(-1);
   });
+
+  it("Deberia Mostrar el monto total a pagar con la tarifa nocturna.", () => {
+    const tarifa = new Tarifar("12:03","23:03")
+    expect(tarifa.showTotalCost()).toEqual(112);
+  });
 });

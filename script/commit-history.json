@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8c19c907cf572ddd5699f7b4fd04cf572781ab2f",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T23:21:47.000Z",
       "message": "feat: Valido con un mensaje que la hora de entrada no sea depues que la de salida",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/8c19c907cf572ddd5699f7b4fd04cf572781ab2f"
     },
     "stats": {
       "total": 15,
@@ -110,6 +110,25 @@
     },
     "coverage": 91.3,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-07T23:55:56.000Z",
+      "message": "feat: Muestro el monto total a pagar con la tarifa nocturna",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 23,
+      "additions": 22,
+      "deletions": 1,
+      "date": "2025-09-07"
+    },
+    "coverage": 90.91,
+    "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -40,7 +40,23 @@ class Tarifar{
     const totalHours = Math.max(1, Math.ceil(diffMinutes / 60));
 
     const base = 10; 
-    return totalHours * base; 
+    const nocturne = 6; 
+
+    const DAY_START = 6 * 60;   // 06:00
+    const DAY_END   = 22 * 60;  // 22:00
+
+    const dayMinutes = Math.max(0, Math.min(end, DAY_END) - Math.max(start, DAY_START));
+
+    const nightMinutes = diffMinutes - dayMinutes;
+
+    const dayHours   = dayMinutes  > 0 ? Math.ceil(dayMinutes / 60)  : 0;
+    const nightHours = nightMinutes > 0 ? Math.ceil(nightMinutes / 60) : 0;
+
+    let total = (dayHours * base) + (nightHours * nocturne);
+
+    if (total === 0) total = base;
+    
+    return total;
   }
 
 }

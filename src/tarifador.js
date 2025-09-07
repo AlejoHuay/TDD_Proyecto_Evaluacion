@@ -26,6 +26,18 @@ class Tarifar{
   showExitHour(){
     return String(this.hoursExit).padStart(2, "0") + ":" + String(this.minutesExit).padStart(2, "0");
   }
+  showTotalCost(){
+
+    const start = this.hoursEntry * 60 + this.minutesEntry;
+    const end   = this.hoursExit  * 60 + this.minutesExit;
+
+    const diffMinutes = end - start;
+
+    const totalHours = Math.max(1, Math.ceil(diffMinutes / 60));
+
+    const base = 10; 
+    return totalHours * base; 
+  }
 
 }
 

@@ -7,6 +7,7 @@ const form = document.querySelector("#tarifar-form");
 
 const entryHourDiv = document.querySelector("#entryHour-div");
 const exitHourDiv = document.querySelector("#exitHour-div");
+const totalCostDiv = document.querySelector("#totalCost-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,4 +21,5 @@ form.addEventListener("submit", (event) => {
 
   entryHourDiv.innerHTML = "<p> Hora entrada: " + tarifa.showEntryHour() + "</p>";
   exitHourDiv.innerHTML = "<p> Hora salida: " + tarifa.showExitHour() + "</p>";
+  totalCostDiv.innerHTML = "<p> Costo total: " + tarifa.showTotalCost() + " Bs</p>";
 });

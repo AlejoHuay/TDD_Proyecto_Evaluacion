@@ -11,4 +11,9 @@ describe("Tarifar", () => {
     const tarifa = new Tarifar("3:16","7:06")
     expect(tarifa.showExitHour()).toEqual("07:06");
   });
+
+  it("Deberia Mostrar el monto total a pagar con la tarifa base", () => {
+    const tarifa = new Tarifar("12:00","15:01")
+    expect(tarifa.showTotalCost()).toEqual(40);
+  });
 });

@@ -38,12 +38,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "66b44b7f9a65b528027d8f74c1d78d3e02c77127",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T22:07:08.000Z",
       "message": "feat: Ingreso hora de ingreso y muestro en pantalla lo ingresado",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/66b44b7f9a65b528027d8f74c1d78d3e02c77127"
     },
     "stats": {
       "total": 59,
@@ -53,6 +53,25 @@
     },
     "coverage": 100,
     "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-07T22:29:03.000Z",
+      "message": "feat: Ingreso hora de salida y muestro en pantalla lo ingresado",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 47,
+      "additions": 40,
+      "deletions": 7,
+      "date": "2025-09-07"
+    },
+    "coverage": 86.67,
+    "test_count": 3,
     "failed_tests": 0,
     "conclusion": "success"
   }

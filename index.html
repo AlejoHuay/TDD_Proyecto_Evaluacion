@@ -8,11 +8,15 @@
     <form id="tarifar-form">
       <label for="entry-hour">Hora entrada:</label>
       <input type="time" id="entry-hour" name="entry-hour" required>
+      <label for="exit-hour">Hora salida:</label>
+      <input type="time" id="exit-hour" name="exit-hour" required>
       <!--<label for="segundo-numero">Segundo número:</label>
       <input type="number" id="segundo-numero" />-->
       <input type="submit" value="mostrar" id="mostrar-button" />
     </form>
+    
     <div id="entryHour-div"></div>
+    <div id="exitHour-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>

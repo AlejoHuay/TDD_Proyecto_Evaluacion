@@ -37,7 +37,7 @@ class Tarifar{
 
     const diffMinutes = end - start;
 
-    const totalHours = Math.max(1, Math.ceil(diffMinutes / 60));
+    //const totalHours = Math.max(1, Math.ceil(diffMinutes / 60));
 
     const base = 10; 
     const nocturne = 6; 
@@ -55,8 +55,12 @@ class Tarifar{
     let total = (dayHours * base) + (nightHours * nocturne);
 
     if (total === 0) total = base;
+
+    if(total<=50){
+        return total 
+    }
     
-    return total;
+    return 50;
   }
 
 }

@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9449e0ab3224e1d956c2bbfcc4f6f837d9e4c56e",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-07T23:55:56.000Z",
       "message": "feat: Muestro el monto total a pagar con la tarifa nocturna",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/9449e0ab3224e1d956c2bbfcc4f6f837d9e4c56e"
     },
     "stats": {
       "total": 23,
@@ -129,6 +129,25 @@
     },
     "coverage": 90.91,
     "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T00:07:02.000Z",
+      "message": "feat: Muestro el monto total a pagar segun el tope maximo por dia calendario",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 12,
+      "deletions": 3,
+      "date": "2025-09-08"
+    },
+    "coverage": 91.18,
+    "test_count": 7,
     "failed_tests": 0,
     "conclusion": "success"
   }

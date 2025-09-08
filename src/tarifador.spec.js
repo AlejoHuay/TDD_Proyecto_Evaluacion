@@ -14,7 +14,7 @@ describe("Tarifar", () => {
 
   it("Deberia Mostrar el monto total a pagar con la tarifa base", () => {
     const tarifa = new Tarifar("12:00","15:01")
-    expect(tarifa.showTotalCost()).toEqual(40);
+    expect(tarifa.showTotalCost()).toEqual("40.00");
   });
 
   it("Deberia Validar que la hora de entrada no sea despues de la de salida", () => {
@@ -24,12 +24,12 @@ describe("Tarifar", () => {
 
   it("Deberia Mostrar el monto total a pagar con la tarifa nocturna.", () => {
     const tarifa = new Tarifar("12:03","23:03")
-    expect(tarifa.showTotalCost()).toEqual(50);
+    expect(tarifa.showTotalCost()).toEqual("50.00");
   });
 
   it("Deberia Mostrar el monto total a pagar segun el tope maximo por dia calendario.", () => {
     const tarifa = new Tarifar("12:03","20:03")
-    expect(tarifa.showTotalCost()).toEqual(50);
+    expect(tarifa.showTotalCost()).toEqual("50.00");
   });
 
   it("Deberia Seleccionar estado del ticket y mostrar eleccion.", () => {
@@ -58,8 +58,13 @@ describe("Tarifar", () => {
       "2025-09-07 → antes_tope=22 | despues_tope=22\n" +
       "2025-09-08 → antes_tope=208 | despues_tope=50\n" +
       "2025-09-09 → antes_tope=12 | despues_tope=12\n" +
-      "TOTAL=84"
+      "TOTAL=84.00"
     );
+  });
+
+  it("Deberia Mostrar el monto final con redondeo monetario a dos decimales.", () => {
+    const tarifa = new Tarifar("12:03","20:03", "si")
+    expect(tarifa.showTotalCost()).toEqual(80.00);
   });
 
 

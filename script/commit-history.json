@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7e3d70f31aba57ecdf33adaeab0c0c643190c726",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T15:38:02.000Z",
       "message": "feat: Muestro un desglose por día cuando la estadía cruza varios días",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/7e3d70f31aba57ecdf33adaeab0c0c643190c726"
     },
     "stats": {
       "total": 73,
@@ -281,6 +281,25 @@
     },
     "coverage": 84.85,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T16:16:08.000Z",
+      "message": "feat: Muestro el monto final con redondeo monetario a dos decimales.",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 134,
+      "additions": 71,
+      "deletions": 63,
+      "date": "2025-09-08"
+    },
+    "coverage": 85.29,
+    "test_count": 13,
     "failed_tests": 0,
     "conclusion": "success"
   }

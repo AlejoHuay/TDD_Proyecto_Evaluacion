@@ -50,6 +50,7 @@ class Tarifar{
     }
 
     this.ticketState = state;
+    this.finalCost=0;
   }
   showEntryHour(){
     return String(this.hoursEntry).padStart(2, "0") + ":" + String(this.minutesEntry).padStart(2, "0");
@@ -71,66 +72,66 @@ class Tarifar{
     const hasExitDate  = this.yearExit  != null && this.monthExit  != null && this.dayExit  != null;
   
     if (hasEntryDate && hasExitDate) {
-    const entryYMD = this.yearEntry * 10000 + this.monthEntry * 100 + this.dayEntry;
-    const exitYMD  = this.yearExit  * 10000 + this.monthExit  * 100 + this.dayExit;
-    if (exitYMD < entryYMD) { 
-      return -2;
-    }
-   
-    if (exitYMD > entryYMD) {
-      const base = 10; 
-      const nocturne = 6; 
-      const DAY_START = 6 * 60;   // 06:00
-      const DAY_END   = 22 * 60;  // 22:00
-
-      const ceilHours = (m) => (m <= 0 ? 0 : Math.ceil(m / 60));
-      const fmt2 = (n) => String(n).padStart(2, "0");
-      const fmtDate = (y,m,d) => `${y}-${fmt2(m)}-${fmt2(d)}`;
-
-      const dStart = new Date(this.yearEntry, this.monthEntry - 1, this.dayEntry);
-      const dEnd   = new Date(this.yearExit,  this.monthExit  - 1, this.dayExit);
-      const lines = [];
-      let totalGlobal = 0;
-
-      for (let d = new Date(dStart); d <= dEnd; d.setDate(d.getDate() + 1)) {
-        const y = d.getFullYear();
-        const m = d.getMonth() + 1; // 1..12
-        const day = d.getDate();
-
-        let start = 0;
-        let end = 24 * 60;
-
-        if (y === this.yearEntry && m === this.monthEntry && day === this.dayEntry) {
-          start = this.hoursEntry * 60 + this.minutesEntry;
-        }
-        
-        if (y === this.yearExit && m === this.monthExit && day === this.dayExit) {
-          end = this.hoursExit * 60 + this.minutesExit;
-        }
-
-        if (end < start) { start = end; }
-
-        const diffMinutes = end - start;
-        
-        const dayMinutes = Math.max(0, Math.min(end, DAY_END) - Math.max(start, DAY_START));
-        const nightMinutes = diffMinutes - dayMinutes;
-
-        const dayHours   = ceilHours(dayMinutes);
-        const nightHours = ceilHours(nightMinutes);
-
-        const subtotal = (dayHours * base) + (nightHours * nocturne);
-        const effective = subtotal === 0 ? base : subtotal;
-
-        const capped = Math.min(50, effective);
-
-        totalGlobal += capped;
-        lines.push(`${fmtDate(y,m,day)} → antes_tope=${effective} | despues_tope=${capped}`);
+      const entryYMD = this.yearEntry * 10000 + this.monthEntry * 100 + this.dayEntry;
+      const exitYMD  = this.yearExit  * 10000 + this.monthExit  * 100 + this.dayExit;
+      if (exitYMD < entryYMD) { 
+        return -2;
       }
+    
+      if (exitYMD > entryYMD) {
+        const base = 10; 
+        const nocturne = 6; 
+        const DAY_START = 6 * 60;   // 06:00
+        const DAY_END   = 22 * 60;  // 22:00
 
-      lines.push(`TOTAL=${totalGlobal}`);
-      return lines.join("\n");
+        const ceilHours = (m) => (m <= 0 ? 0 : Math.ceil(m / 60));
+        const fmt2 = (n) => String(n).padStart(2, "0");
+        const fmtDate = (y,m,d) => `${y}-${fmt2(m)}-${fmt2(d)}`;
+
+        const dStart = new Date(this.yearEntry, this.monthEntry - 1, this.dayEntry);
+        const dEnd   = new Date(this.yearExit,  this.monthExit  - 1, this.dayExit);
+        const lines = [];
+        let totalGlobal = 0;
+
+        for (let d = new Date(dStart); d <= dEnd; d.setDate(d.getDate() + 1)) {
+          const y = d.getFullYear();
+          const m = d.getMonth() + 1; // 1..12
+          const day = d.getDate();
+
+          let start = 0;
+          let end = 24 * 60;
+
+          if (y === this.yearEntry && m === this.monthEntry && day === this.dayEntry) {
+            start = this.hoursEntry * 60 + this.minutesEntry;
+          }
+          
+          if (y === this.yearExit && m === this.monthExit && day === this.dayExit) {
+            end = this.hoursExit * 60 + this.minutesExit;
+          }
+
+          if (end < start) { start = end; }
+
+          const diffMinutes = end - start;
+          
+          const dayMinutes = Math.max(0, Math.min(end, DAY_END) - Math.max(start, DAY_START));
+          const nightMinutes = diffMinutes - dayMinutes;
+
+          const dayHours   = ceilHours(dayMinutes);
+          const nightHours = ceilHours(nightMinutes);
+
+          const subtotal = (dayHours * base) + (nightHours * nocturne);
+          const effective = subtotal === 0 ? base : subtotal;
+
+          const capped = Math.min(50, effective);
+
+          totalGlobal += capped;
+          lines.push(`${fmtDate(y,m,day)} → antes_tope=${effective} | despues_tope=${capped}`);
+        }
+        this.finalCost=totalGlobal.toFixed(2); // "84.00"; 
+        lines.push(`TOTAL=${this.finalCost}`);
+        return lines.join("\n");
+      }
     }
-  }
 
     const start = this.hoursEntry * 60 + this.minutesEntry;
     const end   = this.hoursExit  * 60 + this.minutesExit;
@@ -158,9 +159,11 @@ class Tarifar{
     if (total === 0){ total = base; }
       
     if(total<=50){
-        return total 
+      this.finalCost=total;
+        return this.finalCost.toFixed(2);
     }
-    return 50;
+    this.finalCost=50;
+    return this.finalCost.toFixed(2);
   }
   showTicketState(){
     return this.ticketState;

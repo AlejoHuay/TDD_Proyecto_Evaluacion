@@ -209,12 +209,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ca9c3428bd3e6d6e50821f4702209148662589f5",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T02:40:09.000Z",
       "message": "refactoring: Mejoro logica del showTotalCost() para hacer un return rapido si se perdio el ticket",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/ca9c3428bd3e6d6e50821f4702209148662589f5"
     },
     "stats": {
       "total": 19,
@@ -223,6 +223,25 @@
       "date": "2025-09-08"
     },
     "coverage": 90.24,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T14:26:45.000Z",
+      "message": "feat: Ingreso date-time-local de ingreso y salida y muestro en pantalla lo ingresado",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 98,
+      "additions": 66,
+      "deletions": 32,
+      "date": "2025-09-08"
+    },
+    "coverage": 56.47,
     "test_count": 10,
     "failed_tests": 0,
     "conclusion": "success"

@@ -1,31 +1,67 @@
 class Tarifar{
-  constructor(entryHour, exitHour, state){
-    
-    if (!entryHour || !/^\d{1,2}:\d{2}$/.test(entryHour)) {
-      this.hoursEntry = null;
-      this.minutesEntry = null;
+  constructor(entryDate, exitDate, state){
+
+    if (typeof entryDate === "string" && entryDate.includes("T")) {
+      
+      if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(entryDate)) {
+        this.hoursEntry = null; this.minutesEntry = null;
+        this.dayEntry = null; this.monthEntry = null; this.yearEntry = null;
+      } else {
+        const [fechaEntrada, horaEntrada] = entryDate.split("T");
+        const [yearEntry, monthEntry, dayEntry] = fechaEntrada.split("-").map(Number); 
+        const [hoursEntry, minutesEntry] = horaEntrada.split(":").map(Number);
+        this.yearEntry = yearEntry; this.monthEntry = monthEntry; this.dayEntry = dayEntry;
+        this.hoursEntry = hoursEntry; this.minutesEntry = minutesEntry;
+      }
     } else {
-      const [hoursEntry, minutesEntry] = entryHour.split(":").map(Number);
-      this.hoursEntry = hoursEntry;
-      this.minutesEntry = minutesEntry;
+
+      if (!entryDate || !/^\d{1,2}:\d{2}$/.test(entryDate)) {
+        this.hoursEntry = null; this.minutesEntry = null;
+        this.dayEntry = null; this.monthEntry = null; this.yearEntry = null;
+      } else {
+        const [hoursEntry, minutesEntry] = entryDate.split(":").map(Number);
+        this.hoursEntry = hoursEntry; this.minutesEntry = minutesEntry;
+        this.dayEntry = null; this.monthEntry = null; this.yearEntry = null;
+      }
     }
 
-    if (!exitHour || !/^\d{1,2}:\d{2}$/.test(exitHour)) {
-      this.hoursExit = null;
-      this.minutesExit = null;
-    } else {
-      const [hoursExit, minutesExit] = exitHour.split(":").map(Number);
-      this.hoursExit = hoursExit;
-      this.minutesExit = minutesExit;
-    }
-    this.ticketState=state; 
+    if (typeof exitDate === "string" && exitDate.includes("T")) {
 
+      if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(exitDate)) {
+        this.hoursExit = null; this.minutesExit = null;
+        this.dayExit = null; this.monthExit = null; this.yearExit = null;
+      } else {
+        const [fechaSalida, horaSalida] = exitDate.split("T");
+        const [yearExit, monthExit, dayExit] = fechaSalida.split("-").map(Number); 
+        const [hoursExit, minutesExit] = horaSalida.split(":").map(Number);
+        this.yearExit = yearExit; this.monthExit = monthExit; this.dayExit = dayExit;
+        this.hoursExit = hoursExit; this.minutesExit = minutesExit;
+      }
+    } else {
+
+      if (!exitDate || !/^\d{1,2}:\d{2}$/.test(exitDate)) {
+        this.hoursExit = null; this.minutesExit = null;
+        this.dayExit = null; this.monthExit = null; this.yearExit = null;
+      } else {
+        const [hoursExit, minutesExit] = exitDate.split(":").map(Number);
+        this.hoursExit = hoursExit; this.minutesExit = minutesExit;
+        this.dayExit = null; this.monthExit = null; this.yearExit = null;
+      }
+    }
+
+    this.ticketState = state;
   }
   showEntryHour(){
     return String(this.hoursEntry).padStart(2, "0") + ":" + String(this.minutesEntry).padStart(2, "0");
   }
   showExitHour(){
     return String(this.hoursExit).padStart(2, "0") + ":" + String(this.minutesExit).padStart(2, "0");
+  }
+  showEntryDate(){
+    return String(this.monthEntry).padStart(2, "0") + " " + String(this.dayEntry).padStart(2, "0") + " at " + this.showEntryHour();
+  }
+  showExitDate(){
+    return String(this.monthExit).padStart(2, "0") + " " + String(this.dayExit).padStart(2, "0") + " at " + this.showExitHour();
   }
   showTotalCost(){
 

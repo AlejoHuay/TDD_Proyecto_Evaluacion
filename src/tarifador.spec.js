@@ -42,5 +42,10 @@ describe("Tarifar", () => {
     expect(tarifa.showPenalty()).toEqual(80);
   });
 
+  it("Deberia Mostrar el monto final a pagar con la penalidad para el estado de ticket seleccionado", () => {
+    const tarifa = new Tarifar("12:03","20:03", "si")
+    expect(tarifa.showTotalCost()).toEqual(80);
+  });
+
 
 });

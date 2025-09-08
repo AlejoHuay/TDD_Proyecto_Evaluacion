@@ -55,13 +55,16 @@ class Tarifar{
 
     let total = (dayHours * base) + (nightHours * nocturne);
 
-    if (total === 0) total = base;
 
-    if(total<=50){
+    if(this.ticketState==="si"){
+      return 80;
+    }else{
+      if(total<=50){
+        if (total === 0) total = base;
         return total 
     }
-    
     return 50;
+    }
   }
   showTicketState(){
     return this.ticketState;

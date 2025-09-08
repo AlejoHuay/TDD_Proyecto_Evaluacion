@@ -228,12 +228,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0fc9fd6333229e170986a33b3dfb7ae7118b1b6f",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T14:26:45.000Z",
       "message": "feat: Ingreso date-time-local de ingreso y salida y muestro en pantalla lo ingresado",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/0fc9fd6333229e170986a33b3dfb7ae7118b1b6f"
     },
     "stats": {
       "total": 98,
@@ -243,6 +243,25 @@
     },
     "coverage": 56.47,
     "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T14:51:32.000Z",
+      "message": "feat: Valido que la fecha de salida no pueda ser anterior a la de entrada, muestro un mensaje por pantalla",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 20,
+      "deletions": 1,
+      "date": "2025-09-08"
+    },
+    "coverage": 79.35,
+    "test_count": 11,
     "failed_tests": 0,
     "conclusion": "success"
   }

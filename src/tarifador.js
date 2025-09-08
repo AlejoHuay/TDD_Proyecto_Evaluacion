@@ -65,7 +65,19 @@ class Tarifar{
   }
   showTotalCost(){
 
-    if(this.ticketState==="si"){ return 80; }
+  if(this.ticketState==="si"){ return 80; }
+
+  const hasEntryDate = this.yearEntry != null && this.monthEntry != null && this.dayEntry != null;
+  const hasExitDate  = this.yearExit  != null && this.monthExit  != null && this.dayExit  != null;
+  
+  if (hasEntryDate && hasExitDate) {
+    const entryYMD = this.yearEntry * 10000 + this.monthEntry * 100 + this.dayEntry;
+    const exitYMD  = this.yearExit  * 10000 + this.monthExit  * 100 + this.dayExit;
+    if (exitYMD < entryYMD) { 
+      return -2;
+    }
+    
+  }
 
     const start = this.hoursEntry * 60 + this.minutesEntry;
     const end   = this.hoursExit  * 60 + this.minutesExit;

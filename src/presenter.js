@@ -27,6 +27,8 @@ form.addEventListener("submit", (event) => {
   ticketStateDiv.innerHTML = "<p> Ticket perdido? (" + tarifa.showTicketState() + "): " + tarifa.showPenalty() + " Bs</p>";
   if(tarifa.showTotalCost()===-1){
     totalCostDiv.innerHTML = "<p> Costo total: La hora de salida no puede ser anterior a la de entrada. </p>";
+  }else if(tarifa.showTotalCost()===-2){
+    totalCostDiv.innerHTML = "<p> Costo total: fecha de salida no puede ser anterior a la de entrada. </p>";
   }else{
     totalCostDiv.innerHTML = "<p> Costo total: " + tarifa.showTotalCost() + " Bs</p>";
   }

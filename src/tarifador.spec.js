@@ -47,5 +47,10 @@ describe("Tarifar", () => {
     expect(tarifa.showTotalCost()).toEqual(80);
   });
 
+  it("Deberia Validar que la fecha de salida no pueda ser anterior a la de entrada", () => {
+    const tarifa = new Tarifar("2025-09-08T08:00", "2025-09-07T10:00")
+    expect(tarifa.showTotalCost()).toEqual(-2);
+  });
+
 
 });

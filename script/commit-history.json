@@ -247,12 +247,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "33bdb8da3ae1ff79ae48467b801921aae12b1f86",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T14:51:32.000Z",
       "message": "feat: Valido que la fecha de salida no pueda ser anterior a la de entrada, muestro un mensaje por pantalla",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/33bdb8da3ae1ff79ae48467b801921aae12b1f86"
     },
     "stats": {
       "total": 21,
@@ -262,6 +262,25 @@
     },
     "coverage": 79.35,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T15:38:02.000Z",
+      "message": "feat: Muestro un desglose por día cuando la estadía cruza varios días",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 73,
+      "additions": 68,
+      "deletions": 5,
+      "date": "2025-09-08"
+    },
+    "coverage": 84.85,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }

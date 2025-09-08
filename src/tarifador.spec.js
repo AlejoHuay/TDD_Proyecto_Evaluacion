@@ -52,5 +52,15 @@ describe("Tarifar", () => {
     expect(tarifa.showTotalCost()).toEqual(-2);
   });
 
+  it("Deberia Mostrar un desglose por día cuando la estadía cruza varios días", () => {
+    const tarifa = new Tarifar("2025-09-07T21:30", "2025-09-09T01:15")
+    expect(tarifa.showTotalCost()).toEqual(
+      "2025-09-07 → antes_tope=22 | despues_tope=22\n" +
+      "2025-09-08 → antes_tope=208 | despues_tope=50\n" +
+      "2025-09-09 → antes_tope=12 | despues_tope=12\n" +
+      "TOTAL=84"
+    );
+  });
+
 
 });

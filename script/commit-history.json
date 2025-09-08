@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "504a7e5fbb92247e94d303f4a7783ce06738e511",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T01:56:23.000Z",
       "message": "feat: Selecciono el estado del ticket y muestro eleccion",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/504a7e5fbb92247e94d303f4a7783ce06738e511"
     },
     "stats": {
       "total": 25,
@@ -167,6 +167,25 @@
     },
     "coverage": 91.67,
     "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T02:00:59.000Z",
+      "message": "feat: Selecciono el estado del ticket y muestro el monto de la penalidad que tiene el estado seleccionado",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 12,
+      "deletions": 2,
+      "date": "2025-09-08"
+    },
+    "coverage": 89.74,
+    "test_count": 9,
     "failed_tests": 0,
     "conclusion": "success"
   }

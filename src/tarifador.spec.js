@@ -37,5 +37,10 @@ describe("Tarifar", () => {
     expect(tarifa.showTicketState()).toEqual("si");
   });
 
+  it("Deberia Seleccionar estado del ticket y mostrar el monto de la penalidad que tiene el estado seleccionado", () => {
+    const tarifa = new Tarifar("12:03","20:03", "si")
+    expect(tarifa.showPenalty()).toEqual(80);
+  });
+
 
 });

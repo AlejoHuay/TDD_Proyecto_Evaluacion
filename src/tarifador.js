@@ -66,7 +66,12 @@ class Tarifar{
   showTicketState(){
     return this.ticketState;
   }
-
+  showPenalty(){
+    if(this.ticketState==="si"){
+        return 80;
+    }
+    return 0;
+  }
 }
 
 export default Tarifar; 

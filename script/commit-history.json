@@ -190,17 +190,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "892614994001c29087e41eb43ba045238f3772b5",
     "author": "Alejandro Alvarez",
     "commit": {
       "date": "2025-09-08T02:26:52.000Z",
       "message": "feat: Muestro el monto final a pagar con la penalidad para el estado de ticket seleccionado",
-      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/892614994001c29087e41eb43ba045238f3772b5"
     },
     "stats": {
       "total": 16,
       "additions": 12,
       "deletions": 4,
+      "date": "2025-09-08"
+    },
+    "coverage": 90.24,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Alejandro Alvarez",
+    "commit": {
+      "date": "2025-09-08T02:40:09.000Z",
+      "message": "refactoring: Mejoro logica del showTotalCost() para hacer un return rapido si se perdio el ticket",
+      "url": "https://github.com/AlejoHuay/TDD_Proyecto_Evaluacion/commit/HEAD"
+    },
+    "stats": {
+      "total": 19,
+      "additions": 7,
+      "deletions": 12,
       "date": "2025-09-08"
     },
     "coverage": 90.24,

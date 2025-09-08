@@ -29,12 +29,12 @@ class Tarifar{
   }
   showTotalCost(){
 
+    if(this.ticketState==="si"){ return 80; }
+
     const start = this.hoursEntry * 60 + this.minutesEntry;
     const end   = this.hoursExit  * 60 + this.minutesExit;
 
-    if (end < start) {
-        return -1;
-    }
+    if (end < start){ return -1; }
 
     const diffMinutes = end - start;
 
@@ -47,24 +47,19 @@ class Tarifar{
     const DAY_END   = 22 * 60;  // 22:00
 
     const dayMinutes = Math.max(0, Math.min(end, DAY_END) - Math.max(start, DAY_START));
-
     const nightMinutes = diffMinutes - dayMinutes;
 
     const dayHours   = dayMinutes  > 0 ? Math.ceil(dayMinutes / 60)  : 0;
     const nightHours = nightMinutes > 0 ? Math.ceil(nightMinutes / 60) : 0;
 
     let total = (dayHours * base) + (nightHours * nocturne);
-
-
-    if(this.ticketState==="si"){
-      return 80;
-    }else{
-      if(total<=50){
-        if (total === 0) total = base;
+    
+    if (total === 0){ total = base; }
+      
+    if(total<=50){
         return total 
     }
     return 50;
-    }
   }
   showTicketState(){
     return this.ticketState;

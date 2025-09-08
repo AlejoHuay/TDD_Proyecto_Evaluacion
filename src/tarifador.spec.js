@@ -31,4 +31,11 @@ describe("Tarifar", () => {
     const tarifa = new Tarifar("12:03","20:03")
     expect(tarifa.showTotalCost()).toEqual(50);
   });
+
+  it("Deberia Seleccionar estado del ticket y mostrar eleccion.", () => {
+    const tarifa = new Tarifar("12:03","20:03", "si")
+    expect(tarifa.showTicketState()).toEqual("si");
+  });
+
+
 });

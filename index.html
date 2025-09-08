@@ -10,6 +10,11 @@
       <input type="time" id="entry-hour" name="entry-hour" required>
       <label for="exit-hour">Hora salida:</label>
       <input type="time" id="exit-hour" name="exit-hour" required>
+      <label for="cbx-estado">Ticket perdido:</label>
+      <select name="cbx-estado" id="cbx-estado">
+          <option value="no">No</option>
+          <option value="si">Si</option>
+      </select>
       <!--<label for="segundo-numero">Segundo número:</label>
       <input type="number" id="segundo-numero" />-->
       <input type="submit" value="calcular" id="calcular-button" />
@@ -18,6 +23,7 @@
     <div id="entryHour-div"></div>
     <div id="exitHour-div"></div>
     <div id="totalCost-div"></div>
+    <div id="ticketState-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>

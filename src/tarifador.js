@@ -1,5 +1,5 @@
 class Tarifar{
-  constructor(entryHour, exitHour){
+  constructor(entryHour, exitHour, state){
     
     if (!entryHour || !/^\d{1,2}:\d{2}$/.test(entryHour)) {
       this.hoursEntry = null;
@@ -18,6 +18,7 @@ class Tarifar{
       this.hoursExit = hoursExit;
       this.minutesExit = minutesExit;
     }
+    this.ticketState=state; 
 
   }
   showEntryHour(){
@@ -61,6 +62,9 @@ class Tarifar{
     }
     
     return 50;
+  }
+  showTicketState(){
+    return this.ticketState;
   }
 
 }
